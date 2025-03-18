@@ -1,0 +1,1 @@
+import{r as o,P as r}from"./navigation-CRu-D-dg.js";import{r as n}from"./render-BK4Kvjgj.js";o(document.querySelector("#type-list"));const c=new r,a=new URLSearchParams(window.location.search),e=a.get("type"),s=document.getElementById("page-title");s.innerText=e+" type";function i(){c.getPokemonByType(e).then(t=>{n(t)})}i();

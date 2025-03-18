@@ -1,0 +1,1 @@
+import{r as o,P as r}from"./navigation-CRu-D-dg.js";import{r as n}from"./render-BK4Kvjgj.js";const t=new r;o(document.getElementById("type-list"));function a(){t.getPokemonData().then(e=>n(e))}a();function i(){t.previousPage(),t.getPokemonData().then(e=>n(e))}window.previous=i;function m(){t.nextPage(),t.getPokemonData().then(e=>n(e))}window.next=m;
