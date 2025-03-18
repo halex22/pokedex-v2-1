@@ -1,23 +1,11 @@
 export default class PokeService {
-    // #offset;
-
     static BASE_URL = "https://pokeapi.co/api/v2/";
     static POKE_URL = "pokemon/"
+    static TYPE_URL = "type/"
     constructor(limit=50, offset=0){
         this.limit=limit,
         this.offset=offset
     }
-
-    // set offset(value){
-    //     if(value<0) this.#offset;
-    //     if(value>1302) this.#offset=1300;
-    //     this.#offset = value;
-    //     console.log(this.#offset)
-    // }
-
-    // get offset(){
-    //     return this.#offset;
-    // }
 
     getPokemonData(){
         const url = PokeService.BASE_URL+PokeService.POKE_URL + `/?offset=${this.offset}&limit=${this.limit}"`;
@@ -54,5 +42,13 @@ export default class PokeService {
             this.offset -= this.limit;
         }
         this.getPokemonData();
+    }
+
+    getPokemonByType(type){
+        const url = PokeService.BASE_URL+PokeService.TYPE_URL + type;
+        return fetch(url)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(err => err)
     }
 }
