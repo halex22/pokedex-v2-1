@@ -9,4 +9,4 @@ export function renderNav(element){
   pokemonTypes.forEach(type => element.innerHTML += createTypeItem(type))
 }
 
-const createTypeItem = type => `<li><a class="type-link" href="/pokedex-v2-1/type.html?type=${type}">${type}</a></li>`
+const createTypeItem = type => `<li><a class="type-link" href="/type.html?type=${type}">${type}</a></li>`
