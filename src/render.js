@@ -31,7 +31,7 @@ function createLinkedName(name) {
   const container  = document.createElement('div')
   const linkedName = document.createElement('a')
   linkedName.classList.add('pokemon-name')
-  linkedName.href = `/detail.html?name=${name}`
+  linkedName.href = `/pokedex-v2-1/detail.html?name=${name}`
   const txt = document.createTextNode(name)
   linkedName.appendChild(txt)
   container.appendChild(linkedName)
